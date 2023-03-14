@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#sun {
+  width: 65px;
+  position: absolute;
+  box-shadow: 0 0 100px 10px gold;
+  border-radius: 50%;
+}
+
+#mercury {
+  width: 25px;
+  position: absolute;
+  box-shadow: 0 0 25px 5px orange;
+  border-radius: 50%;
+}
+
+#venus {
+  width: 30px;
+  position: absolute;
+  box-shadow: 0 0 25px 5px rgb(255, 202, 104);
+  border-radius: 50%;
+}
+
+#earth {
+  width: 40px;
+  position: absolute;
+  box-shadow: 0 0 25px 5px #1877F2;
+  border-radius: 50%;
+}
+
+#mars {
+  width: 40px;
+  position: absolute;
+  box-shadow: 0 0 25px 5px rgb(177, 2, 2);
+  border-radius: 50%;
+}
+
+#jupiter {
+  width: 55px;
+  position: absolute;
+  box-shadow: 0 0 25px 5px rgb(255, 206, 116);
+  border-radius: 50%;
+}
+
+#saturn {
+  width: 60px;
+  position: absolute;
+  box-shadow: 0 0 25px 5px rgb(87, 87, 250);
+  border-radius: 50%;
+}
+
+#uranus {
+  width: 45px;
+  position: absolute;
+  box-shadow: 0 0 25px 5px rgb(0, 0, 178);
+  border-radius: 50%;
+}
+
+#neptun {
+  width: 50px;
+  position: absolute;
+  box-shadow: 0 0 25px 5px rgb(34, 34, 207);
+  border-radius: 50%;
+}
+
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  z-index: 3;
+}
+
+.star {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  animation-name: star-opacity;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  z-index: 1;
+}
+
+@keyframes star-opacity {
+  0% {
+    opacity: 20%;
+    transform: scale(1.1);
+  }
+  50% {
+    opacity: 100%;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 20%;
+  }
+}
+.rocket {
+  position: relative;
+  left: -100px;
+  width: 100px;
+  animation-name: rocket-star;
+  animation-delay: 2s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rocket-star {
+  0% {
+    transform: translate(-300px, 600px) rotate(45deg);
+  }
+  100% {
+    transform: translate(600px, -100px);
+  }
+}
+.satellite {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  width: 50px;
+  animation-name: satallite;
+  animation-delay: 1s;
+  animation-duration: 300s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes satallite {
+  0% {
+    right: 100px;
+    bottom: 100px;
+  }
+  25% {
+    transform: translateY(-600px) rotate(45deg);
+  }
+  50% {
+    transform: translateX(-1300px) rotate(180deg);
+  }
+  100% {
+    right: 100px;
+    bottom: 100px;
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=space.css.map */
